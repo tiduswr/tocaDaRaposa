@@ -8,6 +8,7 @@ import tocadaraposa.config.database.*;
 public class TocadaraposaApplication {
 
 	public static void main(String[] args) {
+		GeneralConfigs.makeImageDir();
 		SpringApplication.run(TocadaraposaApplication.class, args);
 	}
 }

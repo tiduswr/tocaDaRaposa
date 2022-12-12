@@ -64,17 +64,17 @@ public class GeneralConfigs {
         Files.write(destino, content.getBytes(charset));
     }
 
-    private static void makeImageDir(){
+    public static void makeImageDir(){
         File directory = new File("uploaded-images/product");
         if (!directory.exists()) {
-            System.out.println("DB LOG -> Creating uploaded-images/product directory!");
+            System.out.println("Creating uploaded-images/product directory!");
             if(!directory.mkdirs()){
                 System.out.println("!!!!!!!! NÃO FOI POSSIVEL CRIAR A PASTA DOS PRODUTOS !!!!!!!!!!");
             }
         }
         directory = new File("uploaded-images/category");
         if (!directory.exists()) {
-            System.out.println("DB LOG -> Creating uploaded-images/category directory!");
+            System.out.println("Creating uploaded-images/category directory!");
             if(!directory.mkdirs()){
                 System.out.println("!!!!!!!! NÃO FOI POSSIVEL CRIAR A PASTA DAS CATEGORIAS !!!!!!!!!!");
             }
