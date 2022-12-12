@@ -17,7 +17,7 @@ public class FileUploadUtil {
             Path filePath = uploadDirectory.resolve(fileName);
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao salvar a imagem!");
+            throw new RuntimeException("Erro ao salvar a imagem!(" + e.getMessage() + ")");
         }
     }
     public void deleteFile(String fileName, String folder){
@@ -26,7 +26,7 @@ public class FileUploadUtil {
         try{
             Files.delete(filePath);
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao deletar a imagem!");
+            throw new RuntimeException("Erro ao deletar a imagem!(" + e.getMessage() + ")");
         }
     }
 
