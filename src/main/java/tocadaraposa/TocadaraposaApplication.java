@@ -8,7 +8,6 @@ import tocadaraposa.config.database.*;
 public class TocadaraposaApplication {
 
 	public static void main(String[] args) {
-		GeneralConfigs.initDatabaseConfiguration();
 		SpringApplication.run(TocadaraposaApplication.class, args);
 	}
 }
