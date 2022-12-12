@@ -93,7 +93,7 @@ public class CategoryService{
             m.update(imagename.getBytes(),0,imagename.length());
             imagename = new BigInteger(1,m.digest()).toString(16);
         } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException("Erro ao salvar a imagem no servidor!");
+            throw new RuntimeException("Erro ao salvar a imagem no servidor!" + "(" + e.getMessage() + ")");
         }
         return imagename;
     }
